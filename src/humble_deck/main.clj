@@ -11,7 +11,12 @@
     [io.github.humbleui.ui :as ui])
   (:import
     [io.github.humbleui.skija ColorSpace]
+<<<<<<< HEAD
     [io.github.humbleui.jwm Window]))
+=======
+    [io.github.humbleui.jwm Window]
+    [io.github.humbleui.jwm.skija LayerMetalSkija LayerGLSkija]))
+>>>>>>> 3fd5359 (no instacrash)
 
 (def app
   (common/with-context
@@ -42,7 +47,11 @@
          :mac-icon "resources/icon.icns"
          :bg-color 0xFFFFFFFF}
         state/*app)))
+<<<<<<< HEAD
   (when (= :macos app/platform)
     (set! (.-_colorSpace (.getLayer ^Window @state/*window)) (ColorSpace/getDisplayP3)))
+=======
+  (set! (.-_colorSpace ^LayerGLSkija (.getLayer ^Window @state/*window)) (ColorSpace/getDisplayP3))
+>>>>>>> 3fd5359 (no instacrash)
   ; (reset! debug/*enabled? true)
   (common/redraw))
