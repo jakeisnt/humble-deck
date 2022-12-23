@@ -151,4 +151,4 @@
              (ui/valign 1
                (ui/column
                  progress-controls
-                 controls/controls-impl))]))))))))
+                 controls/controls-impl))]))))))
